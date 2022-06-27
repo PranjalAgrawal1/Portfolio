@@ -102,7 +102,7 @@
                   <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.ThePranjal.in</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 92004 40050</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>linkedIn:</strong> <span>
-                      www.linkedin.com/in/pranjal605</span></li>
+                      linkedin.com/in/pranjal605</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
@@ -458,7 +458,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -475,15 +475,12 @@
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <textarea class="form-control" name="message" rows="10" id="message" required></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+              <div class="my-3" id="status" >
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+              <div class="text-center"><button type="submit" onclick="sendmail()">Send Message</button></div>
+            </div>
           </div>
 
         </div>
