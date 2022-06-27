@@ -251,29 +251,5 @@
 
 
 
-async function sendmail() {
-  let name = document.getElementById('name').value;
-  let email = document.getElementById('email').value;
-  let subject = document.getElementById('subject').value;
-  let message = document.getElementById('message').value;
-  // let url = `https://my-mailer-api.herokuapp.com/?name=%22${name}%22&email=%22${email}%22&subject=%22${subject}%22&message=%22${message}%22`
-  // let url = `http://localhost:8000/?name=%22${name}%22&email=%22${email}%22&subject=%22${subject}%22&message=%22${message}%22`
 
-  if (name && email && subject && message) {
-
-    let statusDiv = document.getElementById('status');
-
-    statusDiv.innerHTML = `<div class="sent-message">Your message has been sent. Thank you!</div>`
-    document.getElementById('name').value = "";
-    document.getElementById('email').value = "";
-    document.getElementById('subject').value = "";
-    document.getElementById('message').value = "";
-    await fetch(`https://my-mailer-api.herokuapp.com/?name=%22${name}%22&email=%22${email}%22&subject=%22${subject}%22&message=%22${message}%22`);
-  } else {
-    let statusDiv = document.getElementById('status');
-
-    statusDiv.innerHTML = `<div class="error-message">Please fill the complete from and click on send message again. Thank you!</div>`
-
-  }
-}
 
